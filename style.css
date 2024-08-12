@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+*{
+    font-family: 'El Messiri';
+}
+.firts-sec {
+   
+    overflow: hidden;
+}
+.firts-bag {
+    animation-name: firts-one;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: 0;
+    z-index: -1111111111!important;
+    left: 0;
+}
+
+
+
+
+@keyframes firts-one {
+    0%,100%{
+        background: url(image/firts.jpg);
+        background-size: cover;
+        scale: 1.1;
+    }
+    25%{
+        background: url(image/sec.jpg);
+        background-size: cover;
+        scale: 1.2;
+    }
+    50% {
+        background:url(image/therd.jpg);
+        background-size: cover;
+        scale: 1.1;
+    }
+    75%{
+        background: url(image/for.jpg);
+        background-size: cover;
+        scale: 1.2;
+    }
+  
+}
+
+
+
+
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/row-1.jpg);
+    background-size: 100%;
+    background-position: center;
+    transition: .3s linear;
+    display: flex;
+    /* justify-content: center; 
+    align-items: center; */
+    flex-wrap: wrap;
+    
+}
+
+.card-countainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-item {
+    width: 20%;
+    background-position: center;
+    height: 100%;
+}
+
+
+
+.card-item::before {
+    content: '';
+    width: 100%;
+    height: 22%;
+    background-color: black;
+    position: absolute;
+    top: -22%;
+    transition: .4s linear;
+}
+.eat-box::before {
+    background-color: rgba(0, 0, 0, 0.652);
+}
+.card-item:hover::before {
+    top: 0;
+    transition: .4s linear;
+}
+
+
+.card-item::after {
+    content: 'VIEW MORE';
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    opacity: 0;
+    color: white;
+    text-align: center;
+
+}
+.card-item:hover::after {
+    transition: .3s linear;
+    bottom: 20px;
+    opacity: 1;
+}
+
+.nine-sec {
+    background-image: url(image/build.jpg);
+    background-size: cover;
+    height: 600px;
+    display: flex; 
+    justify-content: center; align-items: center;
+    flex-direction: column;
+}
+.nine-sec::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.181);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.six-box {
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    height: 100px;
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.254);
+}
+.six-one:hover {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 12px;
+    
+}
+
+
+
+
+
+
+@media only screen and (max-width:1050px) {
+    .main-wrapper {
+        background-size: cover!important;
+
+    }
+   
+
+    
+}    
+@media only screen and (max-width:600px) {
+    .card-item {
+        height: 31.6%;
+        width: 50%;
+        overflow: hidden;
+    }
+    .card-item::before {
+        height: 65%;
+        top: -65%;
+    }
+}
